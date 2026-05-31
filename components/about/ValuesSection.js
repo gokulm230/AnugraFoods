@@ -46,7 +46,7 @@ export default function ValuesSection() {
               key={value.title}
               className="bg-gray-50 p-8 rounded-3xl"
             >
-              <div className="text-[#1B6CA8] mb-6">
+              <div className="text-primary mb-6">
                 {value.icon}
               </div>
 

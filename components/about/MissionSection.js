@@ -7,7 +7,7 @@ export default function MissionSection() {
 
         <Target
           size={60}
-          className="mx-auto text-[#1B6CA8]"
+          className="mx-auto text-primary"
         />
 
         <h2 className="text-4xl text-gray-900 font-bold mt-8">

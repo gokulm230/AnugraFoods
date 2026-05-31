@@ -3,7 +3,7 @@ export default function RetailerSection() {
     <section className="py-24 bg-gray-50">
       <div className="max-w-5xl mx-auto px-6 text-center">
 
-        <span className="text-[#1B6CA8] font-semibold uppercase">
+        <span className="text-primary font-semibold uppercase">
           Bulk Orders
         </span>
 
@@ -27,7 +27,7 @@ export default function RetailerSection() {
           href="https://wa.me/918667591396"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block mt-8 bg-[#1B6CA8] text-white px-8 py-4 rounded-xl"
+          className="inline-block mt-8 bg-primary text-white px-8 py-4 rounded-xl"
         >
           Enquire Now
         </a>

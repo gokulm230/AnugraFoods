@@ -29,7 +29,7 @@ export default function ShopProductCard({ product }) {
         <div className="flex justify-between items-center mt-6">
 
           <div>
-            <p className="text-2xl font-bold text-[#1B6CA8]">
+            <p className="text-2xl font-bold text-primary">
               ₹{product.price}
             </p>
 
@@ -38,7 +38,7 @@ export default function ShopProductCard({ product }) {
             </p>
           </div>
 
-          <button className="bg-[#1B6CA8] text-white px-5 py-3 rounded-xl hover:bg-[#155580] transition">
+          <button className="bg-primary text-white px-5 py-3 rounded-xl hover:bg-primary-dark transition">
             Add To Cart
           </button>
 

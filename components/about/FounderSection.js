@@ -15,7 +15,7 @@ export default function FounderSection() {
 
           <div>
 
-            <span className="text-[#1B6CA8] uppercase font-semibold">
+            <span className="text-primary uppercase font-semibold">
               Founder
             </span>
 
@@ -24,7 +24,7 @@ export default function FounderSection() {
             </h2>
 
             <p className="text-lg text-gray-500 mt-2">
-              Born in Kanyakumari • Based in Sivakasi
+            Based in Sivakasi
             </p>
 
             <p className="text-gray-600 mt-6 leading-relaxed">

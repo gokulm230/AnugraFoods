@@ -16,17 +16,17 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
+    <header className="sticky top-0 z-50 bg-primary shadow-sm">
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="h-20 flex items-center justify-between">
 
           {/* Logo */}
           <Link href="/" className="flex flex-col">
-            <span className="text-2xl font-bold text-[#1B6CA8]">
+            <span className="text-2xl font-bold text-gray-900">
               ANUGRA
             </span>
-            <span className="text-xs text-gray-500">
+            <span className="text-xs text-gray-700 tracking-wide">
               FOOD PRODUCTS
             </span>
           </Link>
@@ -37,7 +37,7 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="font-medium text-black hover:text-[#1B6CA8]"
+                className="font-medium text-black hover:text-gray-700 transition"
               >
                 {item.name}
               </Link>
@@ -53,7 +53,7 @@ export default function Navbar() {
 
             <Link
               href="/shop"
-              className="bg-[#1B6CA8] text-white px-5 py-2 rounded-lg"
+              className="bg-accent text-white px-5 py-2 rounded-lg"
             >
               Shop Now
             </Link>
@@ -88,7 +88,7 @@ export default function Navbar() {
 
               <Link
                 href="/shop"
-                className="bg-[#1B6CA8] text-white py-3 rounded-lg text-center"
+                className="bg-primary text-white py-3 rounded-lg text-center"
               >
                 Shop Now
               </Link>

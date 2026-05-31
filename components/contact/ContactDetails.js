@@ -13,7 +13,7 @@ export default function ContactDetails() {
         <div className="grid md:grid-cols-4 gap-8">
 
           <div className="text-center">
-            <Mail className="mx-auto text-[#1B6CA8]" />
+            <Mail className="mx-auto text-primary" />
             <h3 className="font-bold mt-4">
               Email
             </h3>
@@ -23,7 +23,7 @@ export default function ContactDetails() {
           </div>
 
           <div className="text-center">
-            <Phone className="mx-auto text-[#1B6CA8]" />
+            <Phone className="mx-auto text-primary" />
             <h3 className="font-bold mt-4">
               Phone
             </h3>
@@ -33,7 +33,7 @@ export default function ContactDetails() {
           </div>
 
           <div className="text-center">
-            <MapPin className="mx-auto text-[#1B6CA8]" />
+            <MapPin className="mx-auto text-primary" />
             <h3 className="font-bold mt-4">
               Location
             </h3>
@@ -43,7 +43,7 @@ export default function ContactDetails() {
           </div>
 
           <div className="text-center">
-            <Clock className="mx-auto text-[#1B6CA8]" />
+            <Clock className="mx-auto text-primary" />
             <h3 className="font-bold mt-4">
               Business Hours
             </h3>

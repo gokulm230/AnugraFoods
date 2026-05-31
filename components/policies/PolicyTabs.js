@@ -24,7 +24,7 @@ export default function PolicyTabs() {
               onClick={() => setActive(policy.id)}
               className={`px-6 py-3 rounded-xl font-medium transition ${
                 active === policy.id
-                  ? "bg-[#1B6CA8] text-white"
+                  ? "bg-acent text-white"
                   : "bg-gray-400"
               }`}
             >

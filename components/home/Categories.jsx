@@ -22,7 +22,7 @@ export default function Categories() {
 
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-[#1B6CA8] font-semibold uppercase tracking-wider">
+          <span className="text-primary font-semibold uppercase tracking-wider">
             Our Categories
           </span>
 
@@ -67,7 +67,7 @@ export default function Categories() {
 
                 <Link
                   href="/shop"
-                  className="inline-block bg-[#1B6CA8] text-white px-6 py-3 rounded-lg hover:bg-[#155580] transition"
+                  className="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary-dark transition"
                 >
                   Shop Now
                 </Link>

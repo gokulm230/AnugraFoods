@@ -10,7 +10,7 @@ export default function SeafoodSection() {
 
         <div className="text-center mb-16">
 
-          <span className="text-[#1B6CA8] font-semibold uppercase">
+          <span className="text-primary font-semibold uppercase">
             Seafood Products
           </span>
 

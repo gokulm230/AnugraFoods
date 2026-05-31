@@ -9,7 +9,7 @@ export default function FeaturedProducts() {
 
         <div className="text-center mb-16">
 
-          <span className="text-[#1B6CA8] font-semibold uppercase tracking-wider">
+          <span className="text-primary font-semibold uppercase tracking-wider">
             Our Bestsellers
           </span>
 
@@ -39,7 +39,7 @@ export default function FeaturedProducts() {
 
           <Link
             href="/shop"
-            className="inline-block bg-[#1B6CA8] text-white px-8 py-4 rounded-xl hover:bg-[#155580]"
+            className="inline-block bg-primary text-white px-8 py-4 rounded-xl hover:bg-primary-dark"
           >
             View All Products
           </Link>

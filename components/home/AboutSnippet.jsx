@@ -19,7 +19,7 @@ export default function AboutSnippet() {
           {/* Right Side Content */}
           <div>
 
-            <span className="text-[#1B6CA8] font-semibold uppercase tracking-wider">
+            <span className="text-primary font-semibold uppercase tracking-wider">
               About Anugra
             </span>
 
@@ -45,7 +45,7 @@ export default function AboutSnippet() {
 
             <Link
               href="/about"
-              className="inline-flex items-center bg-[#1B6CA8] text-white px-6 py-3 rounded-lg hover:bg-[#155580] transition"
+              className="inline-flex items-center bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary-dark transition"
             >
               Learn More About Us →
             </Link>
@@ -59,7 +59,7 @@ export default function AboutSnippet() {
         <div className="grid md:grid-cols-4 gap-6 mt-20">
 
           <div className="bg-gray-50 p-8 rounded-2xl text-center">
-            <h3 className="text-4xl font-bold text-[#1B6CA8]">
+            <h3 className="text-4xl font-bold text-primary">
               100%
             </h3>
             <p className="mt-2 text-gray-600">
@@ -68,7 +68,7 @@ export default function AboutSnippet() {
           </div>
 
           <div className="bg-gray-50 p-8 rounded-2xl text-center">
-            <h3 className="text-4xl font-bold text-[#1B6CA8]">
+            <h3 className="text-4xl font-bold text-primary">
               0%
             </h3>
             <p className="mt-2 text-gray-600">
@@ -77,7 +77,7 @@ export default function AboutSnippet() {
           </div>
 
           <div className="bg-gray-50 p-8 rounded-2xl text-center">
-            <h3 className="text-4xl font-bold text-[#1B6CA8]">
+            <h3 className="text-4xl font-bold text-primary">
               2026
             </h3>
             <p className="mt-2 text-gray-600">
@@ -86,7 +86,7 @@ export default function AboutSnippet() {
           </div>
 
           <div className="bg-gray-50 p-8 rounded-2xl text-center">
-            <h3 className="text-4xl font-bold text-[#1B6CA8]">
+            <h3 className="text-4xl font-bold text-primary">
               7+
             </h3>
             <p className="mt-2 text-gray-600">

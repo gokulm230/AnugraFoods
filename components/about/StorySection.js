@@ -15,7 +15,7 @@ export default function StorySection() {
 
           <div>
 
-            <span className="text-[#1B6CA8] font-semibold uppercase">
+            <span className="text-primary font-semibold uppercase">
               Our Journey
             </span>
 

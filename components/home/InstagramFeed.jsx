@@ -5,7 +5,7 @@ export default function InstagramFeed() {
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
-          <Camera size={48} className="mx-auto text-[#1B6CA8]" />
+          <Camera size={48} className="mx-auto text-primary" />
 
           <h2 className="text-4xl font-bold mt-4">Follow Us On Instagram</h2>
 

@@ -1,26 +1,41 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #854F0B;
+  --color-accent: #BA7517;
+  --color-cta: #993C1D;
+  --color-organic: #3B6D11;
+  --color-card: #FAEEDA;
+  --color-background: #FBF8F3;
+  --color-textmain: #2C2C2A;
+}
+
+/* Palette utility classes to centralize colors (use these in JSX className) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: #854F0B;
+  --color-primary-dark: #6A3D08;
+  --color-accent: #BA7517;
+  --color-cta: #993C1D;
+  --color-organic: #3B6D11;
+  --color-card: #FAEEDA;
+  --color-background: #FBF8F3;
+  --color-textmain: #2C2C2A;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+.bg-primary { background-color: var(--color-primary); }
+.text-primary { color: var(--color-primary); }
+.bg-accent { background-color: var(--color-accent); }
+.text-accent { color: var(--color-accent); }
+.bg-cta { background-color: var(--color-cta); }
+.text-cta { color: var(--color-cta); }
+.bg-organic { background-color: var(--color-organic); }
+.text-organic { color: var(--color-organic); }
+.bg-card { background-color: var(--color-card); }
+.bg-background { background-color: var(--color-background); }
+.text-main { color: var(--color-textmain); }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* Hover utility classes (escaped colon so they can be used in JSX as 'hover:bg-primary-dark') */
+.hover\:bg-primary-dark:hover { background-color: var(--color-primary-dark); }
+.hover\:bg-primary:hover { background-color: var(--color-primary); }
+.hover\:text-primary:hover { color: var(--color-primary); }
+.hover\:text-accent:hover { color: var(--color-accent); }

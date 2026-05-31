@@ -27,7 +27,7 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="text-center mb-16">
-          <span className="text-[#1B6CA8] font-semibold uppercase">
+          <span className="text-primary font-semibold uppercase">
             Testimonials
           </span>
 
@@ -42,7 +42,7 @@ export default function Testimonials() {
               key={index}
               className="bg-white p-8 rounded-3xl shadow-sm"
             >
-              <Quote className="text-[#1B6CA8] mb-4" />
+              <Quote className="text-primary mb-4" />
 
               <p className="text-gray-600 leading-relaxed">
                 "{item.review}"

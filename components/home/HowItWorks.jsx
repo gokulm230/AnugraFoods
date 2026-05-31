@@ -32,7 +32,7 @@ export default function HowItWorks() {
 
         {/* Header */}
         <div className="text-center mb-20">
-          <span className="text-[#1B6CA8] font-semibold uppercase tracking-wider">
+          <span className="text-primary font-semibold uppercase tracking-wider">
             How It Works
           </span>
 
@@ -58,11 +58,11 @@ export default function HowItWorks() {
             >
 
               {/* Step Number */}
-              <div className="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-[#1B6CA8] text-white flex items-center justify-center font-bold">
+              <div className="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
                 {index + 1}
               </div>
 
-              <div className="text-[#1B6CA8] flex justify-center mb-6 mt-4">
+              <div className="text-primary flex justify-center mb-6 mt-4">
                 {step.icon}
               </div>
 

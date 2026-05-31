@@ -39,7 +39,7 @@ export default function WhyChooseUs() {
 
         {/* Heading */}
         <div className="text-center mb-16">
-          <span className="text-[#1B6CA8] font-semibold uppercase tracking-wider">
+          <span className="text-primary font-semibold uppercase tracking-wider">
             Why Anugra?
           </span>
 
@@ -62,9 +62,9 @@ export default function WhyChooseUs() {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="group p-8 rounded-3xl bg-gray-50 hover:bg-[#1B6CA8] transition-all duration-300"
+              className="group p-8 rounded-3xl bg-gray-50 hover:bg-primary transition-all duration-300"
             >
-              <div className="text-[#1B6CA8] group-hover:text-white mb-6 transition">
+              <div className="text-primary group-hover:text-white mb-6 transition">
                 {feature.icon}
               </div>
 

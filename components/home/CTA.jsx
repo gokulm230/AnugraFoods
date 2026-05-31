@@ -5,7 +5,7 @@ export default function CTA() {
     <section className="py-24">
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="bg-[#1B6CA8] rounded-3xl p-12 md:p-20 text-center text-white">
+        <div className="bg-primary rounded-3xl p-12 md:p-20 text-center text-white">
 
           <h2 className="text-4xl md:text-5xl font-bold">
             Experience The Real Taste
@@ -19,7 +19,7 @@ export default function CTA() {
 
           <Link
             href="/shop"
-            className="inline-block mt-8 bg-white text-[#1B6CA8] px-8 py-4 rounded-xl font-semibold"
+            className="inline-block mt-8 bg-white text-primary px-8 py-4 rounded-xl font-semibold"
           >
             Shop Now
           </Link>

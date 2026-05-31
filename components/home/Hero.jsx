@@ -44,7 +44,7 @@ export default function Hero() {
 
             <Link
               href="/shop"
-              className="bg-[#1B6CA8] hover:bg-[#155580] px-8 py-4 rounded-lg font-semibold transition"
+              className="bg-primary hover:bg-primary-dark px-8 py-4 rounded-lg font-semibold transition"
             >
               Shop Now
             </Link>

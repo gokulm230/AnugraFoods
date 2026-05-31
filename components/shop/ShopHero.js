@@ -1,6 +1,6 @@
 export default function ShopHero() {
   return (
-    <section className="py-24 bg-[#1B6CA8] text-white">
+    <section className="py-24 bg-primary text-white">
       <div className="max-w-7xl mx-auto px-6 text-center">
 
         <h1 className="text-5xl md:text-6xl font-bold">

@@ -1,6 +1,6 @@
 export default function FAQHero() {
   return (
-    <section className="bg-[#1B6CA8] py-24 text-white">
+    <section className="bg-primary py-24 text-white">
       <div className="max-w-7xl mx-auto px-6 text-center">
 
         <h1 className="text-5xl md:text-6xl font-bold">

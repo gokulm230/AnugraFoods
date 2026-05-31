@@ -1,6 +1,6 @@
 export default function AboutHero() {
   return (
-    <section className="bg-[#1B6CA8] py-28 text-white">
+    <section className="bg-primary py-28 text-white">
       <div className="max-w-7xl mx-auto px-6 text-center">
 
         <span className="uppercase tracking-widest">
