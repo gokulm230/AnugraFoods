@@ -36,7 +36,7 @@ export default function HowItWorks() {
             How It Works
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-bold mt-4">
+          <h2 className="text-4xl text-gray-900 md:text-5xl font-bold mt-4">
             From Our Kitchen
             <br />
             To Your Doorstep

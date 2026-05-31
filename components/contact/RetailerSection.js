@@ -7,7 +7,7 @@ export default function RetailerSection() {
           Bulk Orders
         </span>
 
-        <h2 className="text-4xl font-bold mt-4">
+        <h2 className="text-4xl text-gray-900 font-bold mt-4">
           Are You A Retailer?
         </h2>
 

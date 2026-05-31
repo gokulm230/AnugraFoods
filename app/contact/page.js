@@ -10,7 +10,7 @@ export default function ContactPage() {
       <ContactHero />
       <ContactForm />
       <WhatsAppCTA />
-      <ContactDetails />
+      {/* <ContactDetails /> */}
       <RetailerSection />
     </>
   );

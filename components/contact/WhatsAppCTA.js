@@ -10,7 +10,7 @@ export default function WhatsAppCTA() {
           className="mx-auto text-green-600"
         />
 
-        <h2 className="text-3xl font-bold mt-6">
+        <h2 className="text-3xl text-gray-900 font-bold mt-6">
           Need Quick Assistance?
         </h2>
 

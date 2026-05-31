@@ -31,7 +31,7 @@ export default function Testimonials() {
             Testimonials
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-bold mt-4">
+          <h2 className="text-4xl text-gray-900 md:text-5xl font-bold mt-4">
             What Our Customers Say
           </h2>
         </div>

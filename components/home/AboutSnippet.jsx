@@ -23,7 +23,7 @@ export default function AboutSnippet() {
               About Anugra
             </span>
 
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
+            <h2 className="text-4xl text-gray-900 md:text-5xl font-bold mt-4 mb-6">
               Made With Tradition,
               <br />
               Crafted With Love

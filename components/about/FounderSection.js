@@ -19,7 +19,7 @@ export default function FounderSection() {
               Founder
             </span>
 
-            <h2 className="text-4xl font-bold mt-4">
+            <h2 className="text-4xl text-gray-900 font-bold mt-4">
               Rajeswari
             </h2>
 

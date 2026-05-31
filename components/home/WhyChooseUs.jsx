@@ -43,7 +43,7 @@ export default function WhyChooseUs() {
             Why Anugra?
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-bold mt-4">
+          <h2 className="text-4xl text-gray-900 md:text-5xl font-bold mt-4">
             Crafted With Purity,
             <br />
             Loved By Families

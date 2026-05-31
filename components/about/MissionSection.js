@@ -10,7 +10,7 @@ export default function MissionSection() {
           className="mx-auto text-[#1B6CA8]"
         />
 
-        <h2 className="text-4xl font-bold mt-8">
+        <h2 className="text-4xl text-gray-900 font-bold mt-8">
           Our Mission
         </h2>
 

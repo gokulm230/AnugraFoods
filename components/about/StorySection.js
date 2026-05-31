@@ -19,7 +19,7 @@ export default function StorySection() {
               Our Journey
             </span>
 
-            <h2 className="text-4xl font-bold mt-4 mb-6">
+            <h2 className="text-4xl text-gray-900 font-bold mt-4 mb-6">
               From a Home Kitchen
               to Your Doorstep
             </h2>

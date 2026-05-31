@@ -34,7 +34,7 @@ export default function ValuesSection() {
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-4xl text-gray-900 font-bold">
             Our Values
           </h2>
         </div>

@@ -14,7 +14,7 @@ export default function OrganicSection() {
             Organic Health Foods
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-bold mt-4">
+          <h2 className="text-4xl text-gray-900 md:text-5xl font-bold mt-4">
             Traditional Tamil Superfoods
           </h2>
 

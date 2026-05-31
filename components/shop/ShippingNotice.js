@@ -11,21 +11,21 @@ export default function ShippingNotice() {
 
         <div className="grid md:grid-cols-3 gap-6">
 
-          <div className="flex items-center gap-4">
+          <div className="flex text-gray-800 items-center gap-4">
             <Truck />
             <span>
               Orders dispatched within 24–48 hours
             </span>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex text-gray-800 items-center gap-4">
             <PackageCheck />
             <span>
               Fresh stock available
             </span>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex text-gray-800 items-center gap-4">
             <Store />
             <span>
               Bulk orders available
