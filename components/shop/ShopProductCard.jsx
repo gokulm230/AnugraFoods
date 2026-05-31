@@ -38,7 +38,7 @@ export default function ShopProductCard({ product }) {
             </p>
           </div>
 
-          <button className="bg-primary text-white px-5 py-3 rounded-xl hover:bg-primary-dark transition">
+          <button className="bg-cta text-white px-5 py-3 rounded-xl hover:opacity-90 transition">
             Add To Cart
           </button>
 

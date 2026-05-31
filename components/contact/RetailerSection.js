@@ -27,7 +27,7 @@ export default function RetailerSection() {
           href="https://wa.me/918667591396"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block mt-8 bg-primary text-white px-8 py-4 rounded-xl"
+          className="inline-block mt-8 bg-cta text-white px-8 py-4 rounded-xl hover:opacity-90"
         >
           Enquire Now
         </a>

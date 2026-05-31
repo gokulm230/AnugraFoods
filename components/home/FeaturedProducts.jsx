@@ -39,7 +39,7 @@ export default function FeaturedProducts() {
 
           <Link
             href="/shop"
-            className="inline-block bg-primary text-white px-8 py-4 rounded-xl hover:bg-primary-dark"
+            className="inline-block bg-cta text-white px-8 py-4 rounded-xl hover:opacity-90"
           >
             View All Products
           </Link>

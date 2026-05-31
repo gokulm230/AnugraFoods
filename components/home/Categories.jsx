@@ -67,7 +67,7 @@ export default function Categories() {
 
                 <Link
                   href="/shop"
-                  className="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary-dark transition"
+                  className="inline-block bg-cta text-white px-6 py-3 rounded-lg hover:opacity-90 transition"
                 >
                   Shop Now
                 </Link>

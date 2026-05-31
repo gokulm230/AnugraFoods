@@ -45,7 +45,7 @@ export default function AboutSnippet() {
 
             <Link
               href="/about"
-              className="inline-flex items-center bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary-dark transition"
+              className="inline-flex items-center bg-cta text-white px-6 py-3 rounded-lg hover:opacity-90 transition"
             >
               Learn More About Us →
             </Link>
