@@ -64,7 +64,7 @@ export default function WhyChooseUs() {
               key={feature.title}
               className="group p-8 rounded-3xl bg-gray-50 hover:bg-primary transition-all duration-300"
             >
-              <div className="text-primary group-hover:text-white mb-6 transition">
+              <div className="mb-6 text-primary group-hover:text-white! transition-colors duration-300">
                 {feature.icon}
               </div>
 
