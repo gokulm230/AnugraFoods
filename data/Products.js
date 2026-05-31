@@ -1,0 +1,58 @@
+const products = [
+  {
+    id: 1,
+    name: "Maasi Meen Thokku",
+    tamilName: "மாசி மீன் தொக்கு",
+    price: 250,
+    weight: "200g",
+    image: "/home_bestsellers/maasi-meen-thokku.jpeg",
+    category: "Seafood",
+  },
+  {
+    id: 2,
+    name: "Iral Meen Thokku",
+    tamilName: "இறால் மீன் தொக்கு",
+    price: 250,
+    weight: "200g",
+    image: "/home_bestsellers/iral-meen-thokku.jpeg",
+    category: "Seafood",
+  },
+  {
+    id: 3,
+    name: "Kanavai Meen Thokku",
+    tamilName: "கணவாய் மீன் தொக்கு",
+    price: 250,
+    weight: "200g",
+    image: "/home_bestsellers/kanavai-meen-thokku.jpeg",
+    category: "Seafood",
+  },
+  // {
+  //   id: 4,
+  //   name: "Mudavaatu Kilangu Rice Mix",
+  //   tamilName: "முடவாட்டு கிழங்கு அரிசி பொடி",
+  //   price: 130,
+  //   weight: "70g",
+  //   image: "/images/products/mudavaatu-rice-mix.jpg",
+  //   category: "Organic",
+  // },
+  // {
+  //   id: 5,
+  //   name: "Pirandai Rice Mix",
+  //   tamilName: "பிரண்டை அரிசி மிக்ஸ்",
+  //   price: 110,
+  //   weight: "70g",
+  //   image: "/images/products/pirandai-rice-mix.jpg",
+  //   category: "Organic",
+  // },
+  // {
+  //   id: 6,
+  //   name: "Diet Kanji Mix",
+  //   tamilName: "கருப்பு கவுனி அரிசி கஞ்சி",
+  //   price: 95,
+  //   weight: "70g",
+  //   image: "/images/products/diet-kanji-mix.jpg",
+  //   category: "Organic",
+  // },
+];
+
+export default products;
