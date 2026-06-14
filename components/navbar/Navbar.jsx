@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Menu, ShoppingCart, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
@@ -17,12 +18,8 @@ export default function Navbar() {
   ];
 
   const vegItems = [
-    "Mudavaatu Kilangu Rice Mix",
-    "Mudavaatu Kilangu Soup Mix",
-    "Pirandai Rice Mix",
     "Poondu Milagu Thokku",
     "Kariveppilai Thokku",
-    "Mudavaatu Kilangu Saatham Podi",
     "Maangai Ginger Thokku",
     "Naarththangai Thokku",
   ];
@@ -88,11 +85,22 @@ export default function Navbar() {
         >
           {/* Logo */}
 
-          <Link href="/" className="flex flex-col">
-            <span className="text-2xl font-bold text-primary">ANUGRA</span>
+          <Link href="/" className="flex items-center gap-3">
+            <Image
+              src="/anugra_logo.jpeg"
+              alt="Anugra Food Products logo"
+              width={52}
+              height={52}
+              className="h-12 w-12 rounded-full object-cover"
+              priority
+            />
 
-            <span className="text-xs tracking-[0.2em] text-textmain">
-              FOOD PRODUCTS
+            <span className="flex flex-col leading-tight">
+              <span className="text-2xl font-bold text-primary">ANUGRA</span>
+
+              <span className="text-xs tracking-[0.2em] text-textmain">
+                FOOD PRODUCTS
+              </span>
             </span>
           </Link>
 
