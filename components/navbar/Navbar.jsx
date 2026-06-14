@@ -102,20 +102,13 @@ export default function Navbar() {
         "
                   >
                     <div className="space-y-3">
+                      
                       <Link href="/shop" className="block hover:text-accent">
-                        Maasi Meen Thokku
+                        Veg
                       </Link>
 
                       <Link href="/shop" className="block hover:text-accent">
-                        Iral Meen Thokku
-                      </Link>
-
-                      <Link href="/shop" className="block hover:text-accent">
-                        Kanavai Meen Thokku
-                      </Link>
-
-                      <Link href="/shop" className="block hover:text-accent">
-                        Nethili Karuvadu Thokku
+                        Non-Veg
                       </Link>
                     </div>
                   </div>
@@ -171,16 +164,9 @@ export default function Navbar() {
         "
                   >
                     <div className="space-y-3">
+                      
                       <Link href="/shop" className="block hover:text-accent">
-                        Pirandai Rice Mix
-                      </Link>
-
-                      <Link href="/shop" className="block hover:text-accent">
-                        Diet Kanji Mix
-                      </Link>
-
-                      <Link href="/shop" className="block hover:text-accent">
-                        Mudavaatu Rice Mix
+                        Rice Mix
                       </Link>
 
                       <Link href="/shop" className="block hover:text-accent">
