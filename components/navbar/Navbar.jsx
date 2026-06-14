@@ -9,6 +9,53 @@ export default function Navbar() {
   const [pickleOpen, setPickleOpen] = useState(false);
   const [organicOpen, setOrganicOpen] = useState(false);
 
+  const nonVegItems = [
+    "Maasi Meen Thokku",
+    "Kanavai Meen Thokku",
+    "Iral Meen Thokku",
+    "Nethili Karuvadu Thokku",
+  ];
+
+  const vegItems = [
+    "Mudavaatu Kilangu Rice Mix",
+    "Mudavaatu Kilangu Soup Mix",
+    "Pirandai Rice Mix",
+    "Poondu Milagu Thokku",
+    "Kariveppilai Thokku",
+    "Mudavaatu Kilangu Saatham Podi",
+    "Maangai Ginger Thokku",
+    "Naarththangai Thokku",
+  ];
+
+  const organicCategories = [
+    {
+      name: "Rice Mixes & Powders",
+      items: ["Pirandai Saadha Podi", "Vallarai Idli Podi"],
+    },
+    {
+      name: "Soup & Kanji Mixes",
+      items: [
+        "Diet Kanji Mix",
+        "Mudakkaththaan Soup Mix",
+        "Kollu Kanji Mix",
+        "Mudavaattu Kilangu Soup Mix",
+      ],
+    },
+    {
+      name: "Health Malts",
+      items: ["Carrot Malt", "ABC Malt"],
+    },
+    {
+      name: "Traditional Health Foods",
+      items: [
+        "Karuppu Kavuni Maavu",
+        "Kaattu Yaanam Maavu",
+        "Beetroot Powder",
+        "Karuppu Ulunthu Laddu",
+      ],
+    },
+  ];
+
   const navLinks = [
     {
       name: "About",
@@ -95,21 +142,48 @@ export default function Navbar() {
           bg-background
           rounded-2xl
           shadow-xl
-          min-w-[280px]
+          min-w-85
           p-5
           border
           border-black/5
         "
                   >
-                    <div className="space-y-3">
-                      
-                      <Link href="/shop" className="block hover:text-accent">
-                        Veg
-                      </Link>
+                    <div className="space-y-5">
+                      <div>
+                        <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+                          Veg
+                        </p>
 
-                      <Link href="/shop" className="block hover:text-accent">
-                        Non-Veg
-                      </Link>
+                        <div className="space-y-2">
+                          {vegItems.map((item) => (
+                            <Link
+                              key={item}
+                              href="/shop"
+                              className="block hover:text-accent"
+                            >
+                              {item}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div>
+                        <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+                          Non-Veg
+                        </p>
+
+                        <div className="space-y-2">
+                          {nonVegItems.map((item) => (
+                            <Link
+                              key={item}
+                              href="/shop"
+                              className="block hover:text-accent"
+                            >
+                              {item}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -157,21 +231,32 @@ export default function Navbar() {
           bg-background
           rounded-2xl
           shadow-xl
-          min-w-[280px]
+          min-w-90
           p-5
           border
           border-black/5
         "
                   >
-                    <div className="space-y-3">
-                      
-                      <Link href="/shop" className="block hover:text-accent">
-                        Rice Mix
-                      </Link>
+                    <div className="space-y-5">
+                      {organicCategories.map((category) => (
+                        <div key={category.name}>
+                          <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+                            {category.name}
+                          </p>
 
-                      <Link href="/shop" className="block hover:text-accent">
-                        Soup Mix
-                      </Link>
+                          <div className="space-y-2 pl-1">
+                            {category.items.map((item) => (
+                              <Link
+                                key={item}
+                                href="/shop"
+                                className="block hover:text-accent"
+                              >
+                                {item}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -221,41 +306,25 @@ export default function Navbar() {
             <div className="space-y-5">
               <div>
                 <h3 className="font-bold text-primary mb-3">
-                  Pickles & Condiments
-                </h3>
-
-                <div className="space-y-2 pl-3">
-                  <Link href="/shop" className="block">
-                    Maasi Meen Thokku
-                  </Link>
-
-                  <Link href="/shop" className="block">
-                    Iral Meen Thokku
-                  </Link>
-
-                  <Link href="/shop" className="block">
-                    Kanavai Meen Thokku
-                  </Link>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-primary mb-3">
                   Organic Mixes & Blends
                 </h3>
 
-                <div className="space-y-2 pl-3">
-                  <Link href="/shop" className="block">
-                    Pirandai Rice Mix
-                  </Link>
+                <div className="space-y-5 pl-3">
+                  {organicCategories.map((category) => (
+                    <div key={category.name}>
+                      <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-2">
+                        {category.name}
+                      </p>
 
-                  <Link href="/shop" className="block">
-                    Diet Kanji Mix
-                  </Link>
-
-                  <Link href="/shop" className="block">
-                    Soup Mix
-                  </Link>
+                      <div className="space-y-2 pl-3">
+                        {category.items.map((item) => (
+                          <Link key={item} href="/shop" className="block">
+                            {item}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
 

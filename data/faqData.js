@@ -31,7 +31,7 @@ const faqData = [
       {
         question: "What organic health foods do you offer?",
         answer:
-          "Mudavaatu Kilangu Rice Mix, Mudavaatu Kilangu Soup Mix, Pirandai Rice Mix, and Diet Kanji Mix.",
+          "Mudavaatu Kilangu Rice Mix, Mudavaatu Kilangu Soup Mix, Pirandai Rice Mix, Diet Kanji Mix, Poondu Milagu Thokku, Kariveppilai Thokku, Mudavaatu Kilangu Saatham Podi, Maangai Ginger Thokku, and Naarththangai Thokku.",
       },
       {
         question: "How do I use the rice mix and soup mix products?",
