@@ -56,7 +56,7 @@ export default function Navbar() {
         {/* Desktop Navigation */}
 
         <nav className="hidden lg:flex items-center gap-10">
-          <div className="flex items-center gap-7">
+          {/* <div className="flex items-center gap-7">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -66,7 +66,7 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-          </div>
+          </div> */}
 
           {/* Products Dropdown */}
 
