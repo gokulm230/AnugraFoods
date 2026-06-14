@@ -32,7 +32,7 @@ export default function HowItWorks() {
 
         {/* Header */}
         <div className="text-center mb-20">
-          <span className="text-primary font-semibold uppercase tracking-wider">
+          <span className="text-primary text-2xl font-semibold uppercase tracking-wider">
             How It Works
           </span>
 

@@ -3,28 +3,28 @@ const products = [
     id: 1,
     name: "Maasi Meen Thokku",
     tamilName: "மாசி மீன் தொக்கு",
-    price: 250,
+    price: 299,
     weight: "200g",
     image: "/home_bestsellers/maasi-meen-thokku.jpeg",
-    category: "Seafood",
+
   },
   {
     id: 2,
     name: "Iral Meen Thokku",
     tamilName: "இறால் மீன் தொக்கு",
-    price: 250,
+    price: 299,
     weight: "200g",
     image: "/home_bestsellers/iral-meen-thokku.jpeg",
-    category: "Seafood",
+
   },
   {
     id: 3,
     name: "Kanavai Meen Thokku",
     tamilName: "கணவாய் மீன் தொக்கு",
-    price: 250,
+    price: 299,
     weight: "200g",
     image: "/home_bestsellers/kanavai-meen-thokku.jpeg",
-    category: "Seafood",
+
   },
   // {
   //   id: 4,

@@ -4,24 +4,18 @@ import Link from "next/link";
 
 export default function FeaturedProducts() {
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
 
-          <span className="text-primary font-semibold uppercase tracking-wider">
+          <span className="text-primary text-2xl font-semibold uppercase tracking-wider">
             Our Bestsellers
           </span>
 
           <h2 className="text-4xl text-gray-900 md:text-5xl font-bold mt-4">
             Customer Favorites
           </h2>
-
-          <p className="text-gray-600 max-w-2xl mx-auto mt-4">
-            Handpicked favourites loved by families,
-            students, and food lovers across Tamil Nadu.
-          </p>
-
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

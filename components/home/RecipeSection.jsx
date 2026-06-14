@@ -33,10 +33,10 @@ const recipes = [
 
 export default function RecipeSection() {
   return (
-    <section className="bg-background py-24">
+    <section className="bg-background py-16">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-14 text-center">
-          <span className="text-primary font-semibold uppercase tracking-wider">
+        <div className="mb-10 text-center">
+          <span className="text-primary text-2xl font-semibold uppercase tracking-wider">
             Recipe Corner
           </span>
 
@@ -44,17 +44,13 @@ export default function RecipeSection() {
             Simple recipes with traditional ingredients
           </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-            Dummy recipe ideas to show how your products can be used in everyday
-            meals, snacks, and comfort dishes.
-          </p>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-3">
           {recipes.map((recipe) => (
             <article
               key={recipe.title}
-              className="group rounded-[2rem] border border-black/5 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className="group rounded-4xl border border-black/5 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
               <div className="flex items-center justify-between gap-4">
                 <span className="rounded-full bg-card px-4 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary">

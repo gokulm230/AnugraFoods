@@ -34,12 +34,12 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
-        <div className="text-center mb-16">
-          <span className="text-primary font-semibold uppercase tracking-wider">
+        <div className="text-center mb-10">
+          <span className="text-primary text-2xl font-semibold uppercase tracking-wider">
             Why Anugra?
           </span>
 
@@ -49,11 +49,6 @@ export default function WhyChooseUs() {
             Loved By Families
           </h2>
 
-          <p className="max-w-2xl mx-auto text-gray-600 mt-5">
-            We combine traditional Tamil recipes with premium organic
-            ingredients to create products that are healthy,
-            flavourful, and truly authentic.
-          </p>
         </div>
 
         {/* Features Grid */}
@@ -72,9 +67,9 @@ export default function WhyChooseUs() {
                 {feature.title}
               </h3>
 
-              <p className="text-gray-600 group-hover:text-gray-100 leading-relaxed">
+              {/* <p className="text-gray-600 group-hover:text-gray-100 leading-relaxed">
                 {feature.description}
-              </p>
+              </p> */}
             </div>
           ))}
 

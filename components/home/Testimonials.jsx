@@ -23,11 +23,11 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="text-center mb-16">
-          <span className="text-primary font-semibold uppercase">
+        <div className="text-center mb-10">
+          <span className="text-primary text-2xl font-semibold uppercase">
             Testimonials
           </span>
 

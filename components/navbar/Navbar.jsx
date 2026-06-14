@@ -30,237 +30,156 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 py-5">
-      <div className="max-w-7xl mx-auto px-6">
-        <div
-          className="
-            bg-background
-            rounded-3xl
-            shadow-lg
-            px-8
-            h-17
-            flex
-            items-center
-            justify-between
-          "
-        >
-          {/* Logo */}
+    <header className="sticky top-0 z-50 w-full border-b border-black/5 bg-background/95 backdrop-blur">
+      <div className="mx-auto flex min-h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        {/* Logo */}
 
-          <Link href="/" className="flex items-center gap-3">
-            <Image
-              src="/anugra_logo.jpeg"
-              alt="Anugra Food Products logo"
-              width={52}
-              height={52}
-              className="h-12 w-12 rounded-full object-cover"
-              priority
-            />
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/anugra_logo.jpeg"
+            alt="Anugra Food Products logo"
+            width={56}
+            height={56}
+            className="h-14 w-14 rounded-full object-cover"
+            priority
+          />
 
-            <span className="flex flex-col leading-tight">
-              <span className="text-2xl font-bold text-primary">ANUGRA</span>
+          <span className="flex flex-col leading-tight">
+            <span className="text-2xl font-bold text-primary">ANUGRA</span>
 
-              <span className="text-xs tracking-[0.2em] text-textmain">
-                FOOD PRODUCTS
-              </span>
+            <span className="text-xs tracking-[0.2em] text-textmain">
+              FOOD PRODUCTS
             </span>
-          </Link>
+          </span>
+        </Link>
 
-          {/* Desktop Navigation */}
+        {/* Desktop Navigation */}
 
-          <nav className="hidden lg:flex items-center gap-8">
-            {/* Products Dropdown */}
-
-            <div
-              className="relative"
-              onMouseEnter={() => setPickleOpen(true)}
-              onMouseLeave={() => setPickleOpen(false)}
-            >
-              <button
-                onClick={() => setPickleOpen(!pickleOpen)}
-                className="
-      flex
-      items-center
-      gap-1
-      font-medium
-      text-textmain
-      hover:text-accent
-      transition
-    "
+        <nav className="hidden lg:flex items-center gap-10">
+          <div className="flex items-center gap-7">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="font-medium text-textmain transition hover:text-accent"
               >
-                {navbarCategories.pickles.title}
-                <ChevronDown
-                  size={18}
-                  className={`transition-transform ${
-                    pickleOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
+                {link.name}
+              </Link>
+            ))}
+          </div>
 
-              {pickleOpen && (
-                <div
-                  className="
-        absolute
-        top-full
-        left-0
-        pt-2
-        z-50
-      "
-                >
-                  <div
-                    className="
-          bg-background
-          rounded-2xl
-          shadow-xl
-          min-w-85
-          p-5
-          border
-          border-black/5
-        "
-                  >
-                    <div className="space-y-5">
-                      {pickleGroups.map((group) => (
-                        <div key={group.name}>
-                          <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
-                            {group.name}
-                          </p>
+          {/* Products Dropdown */}
 
-                          <div className="space-y-2">
-                            {group.items.map((item) => (
-                              <Link
-                                key={item}
-                                href="/shop"
-                                className="block hover:text-accent"
-                              >
-                                {item}
-                              </Link>
-                            ))}
-                          </div>
+          <div
+            className="relative"
+            onMouseEnter={() => setPickleOpen(true)}
+            onMouseLeave={() => setPickleOpen(false)}
+          >
+            <button
+              onClick={() => setPickleOpen(!pickleOpen)}
+              className="flex items-center gap-1 font-medium text-textmain transition hover:text-accent"
+            >
+              {navbarCategories.pickles.title}
+              <ChevronDown
+                size={18}
+                className={`transition-transform ${pickleOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+
+            {pickleOpen && (
+              <div className="absolute left-0 top-full z-50 pt-2">
+                <div className="min-w-85 rounded-2xl border border-black/5 bg-background p-5 shadow-xl">
+                  <div className="space-y-5">
+                    {pickleGroups.map((group) => (
+                      <div key={group.name}>
+                        <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary">
+                          {group.name}
+                        </p>
+
+                        <div className="space-y-2">
+                          {group.items.map((item) => (
+                            <Link
+                              key={item}
+                              href="/shop"
+                              className="block hover:text-accent"
+                            >
+                              {item}
+                            </Link>
+                          ))}
                         </div>
-                      ))}
-                    </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              )}
-            </div>
+              </div>
+            )}
+          </div>
 
-            <div
-              className="relative"
-              onMouseEnter={() => setOrganicOpen(true)}
-              onMouseLeave={() => setOrganicOpen(false)}
+          <div
+            className="relative"
+            onMouseEnter={() => setOrganicOpen(true)}
+            onMouseLeave={() => setOrganicOpen(false)}
+          >
+            <button
+              onClick={() => setOrganicOpen(!organicOpen)}
+              className="flex items-center gap-1 font-medium text-textmain transition hover:text-accent"
             >
-              <button
-                onClick={() => setOrganicOpen(!organicOpen)}
-                className="
-      flex
-      items-center
-      gap-1
-      font-medium
-      text-textmain
-      hover:text-accent
-      transition
-    "
-              >
-                {navbarCategories.organic.title}
-                <ChevronDown
-                  size={18}
-                  className={`transition-transform ${
-                    organicOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
+              {navbarCategories.organic.title}
+              <ChevronDown
+                size={18}
+                className={`transition-transform ${organicOpen ? "rotate-180" : ""}`}
+              />
+            </button>
 
-              {organicOpen && (
-                <div
-                  className="
-        absolute
-        top-full
-        left-0
-        pt-2
-        z-50
-      "
-                >
-                  <div
-                    className="
-          bg-background
-          rounded-2xl
-          shadow-xl
-          min-w-90
-          p-5
-          border
-          border-black/5
-        "
-                  >
-                    <div className="space-y-5">
-                      {organicGroups.map((group) => (
-                        <div key={group.name}>
-                          <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
-                            {group.name}
-                          </p>
+            {organicOpen && (
+              <div className="absolute left-0 top-full z-50 pt-2">
+                <div className="min-w-90 rounded-2xl border border-black/5 bg-background p-5 shadow-xl">
+                  <div className="space-y-5">
+                    {organicGroups.map((group) => (
+                      <div key={group.name}>
+                        <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary">
+                          {group.name}
+                        </p>
 
-                          <div className="space-y-2 pl-1">
-                            {group.items.map((item) => (
-                              <Link
-                                key={item}
-                                href="/shop"
-                                className="block hover:text-accent"
-                              >
-                                {item}
-                              </Link>
-                            ))}
-                          </div>
+                        <div className="space-y-2 pl-1">
+                          {group.items.map((item) => (
+                            <Link
+                              key={item}
+                              href="/shop"
+                              className="block hover:text-accent"
+                            >
+                              {item}
+                            </Link>
+                          ))}
                         </div>
-                      ))}
-                    </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              )}
-            </div>
-          </nav>
-
-          {/* Right Side */}
+              </div>
+            )}
+          </div>
 
           <div className="hidden lg:flex items-center">
-            <button
-              className="
-                p-2
-                rounded-full
-                hover:bg-card
-                transition
-              "
-            >
+            <button className="rounded-full p-2 transition hover:bg-card">
               <ShoppingCart size={22} className="text-textmain" />
             </button>
           </div>
+        </nav>
 
-          {/* Mobile Menu Button */}
+        {/* Mobile Menu Button */}
 
-          <button className="lg:hidden" onClick={() => setOpen(!open)}>
-            {open ? (
-              <X className="text-textmain" />
-            ) : (
-              <Menu className="text-textmain" />
-            )}
-          </button>
-        </div>
+        <button className="lg:hidden" onClick={() => setOpen(!open)}>
+          {open ? <X className="text-textmain" /> : <Menu className="text-textmain" />}
+        </button>
 
         {/* Mobile Menu */}
 
         {open && (
-          <div
-            className="
-              lg:hidden
-              mt-3
-              bg-background
-              rounded-3xl
-              shadow-xl
-              p-6
-            "
-          >
+          <div className="lg:hidden border-t border-black/5 bg-background px-4 py-5 shadow-lg">
             <div className="space-y-5">
               <div>
-                <h3 className="font-bold text-primary mb-3">
-                  {navbarCategories.organic.title}
-                </h3>
+                <h3 className="mb-3 font-bold text-primary">{navbarCategories.organic.title}</h3>
 
                 <div className="space-y-5 pl-3">
                   {organicGroups.map((group) => (

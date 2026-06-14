@@ -30,10 +30,10 @@ const blogs = [
 
 export default function BlogSection() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-16">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-14 flex flex-col gap-4 text-center">
-          <span className="text-primary font-semibold uppercase tracking-wider">
+        <div className="mb-10 flex flex-col gap-4 text-center">
+          <span className="text-primary text-2xl font-semibold uppercase tracking-wider">
             Blog Updates
           </span>
 
@@ -41,10 +41,6 @@ export default function BlogSection() {
             Stories, tips, and food inspiration
           </h2>
 
-          <p className="mx-auto max-w-2xl text-gray-600">
-            Dummy blog cards that can later link to real articles, recipes, and
-            brand updates.
-          </p>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-3">

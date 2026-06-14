@@ -41,13 +41,8 @@ export default function Categories() {
     <section className="bg-white py-8 sm:py-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
+          <p className="text-primary text-2xl font-semibold uppercase tracking-wider">
             Shop by Category
-          </p>
-
-          <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-textmain/70 sm:text-base">
-            Use these top-level categories to browse the store quickly by veg,
-            non-veg, rice mixes, soups, health malts, and traditional foods.
           </p>
         </div>
 
@@ -61,11 +56,11 @@ export default function Categories() {
                 href="/shop"
                 className="group flex min-w-20 flex-col items-center text-center"
               >
-                <span className="flex h-17 w-17 items-center justify-center rounded-full border border-black/10 bg-white shadow-sm transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-md">
-                  <Icon className="h-8 w-8 text-[#111]" strokeWidth={1.9} />
+                <span className="flex h-20 w-20 items-center justify-center rounded-full border border-black/10 bg-white shadow-sm transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-md">
+                  <Icon className="h-10 w-10 text-[#111]" strokeWidth={1.9} />
                 </span>
 
-                <span className="mt-3 max-w-20 text-[12px] leading-snug text-[#7a5b42]">
+                <span className="mt-3 max-w-24 text-[12px] leading-snug text-[#7a5b42]">
                   {category.title}
                 </span>
               </Link>
