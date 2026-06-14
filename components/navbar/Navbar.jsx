@@ -4,54 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, ShoppingCart, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { navbarCategories } from "@/data/navbarCategories";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [pickleOpen, setPickleOpen] = useState(false);
   const [organicOpen, setOrganicOpen] = useState(false);
 
-  const nonVegItems = [
-    "Maasi Meen Thokku",
-    "Kanavai Meen Thokku",
-    "Iral Meen Thokku",
-    "Nethili Karuvadu Thokku",
-  ];
-
-  const vegItems = [
-    "Poondu Milagu Thokku",
-    "Kariveppilai Thokku",
-    "Maangai Ginger Thokku",
-    "Naarththangai Thokku",
-  ];
-
-  const organicCategories = [
-    {
-      name: "Rice Mixes & Powders",
-      items: ["Pirandai Saadha Podi", "Vallarai Idli Podi"],
-    },
-    {
-      name: "Soup & Kanji Mixes",
-      items: [
-        "Diet Kanji Mix",
-        "Mudakkaththaan Soup Mix",
-        "Kollu Kanji Mix",
-        "Mudavaattu Kilangu Soup Mix",
-      ],
-    },
-    {
-      name: "Health Malts",
-      items: ["Carrot Malt", "ABC Malt"],
-    },
-    {
-      name: "Traditional Health Foods",
-      items: [
-        "Karuppu Kavuni Maavu",
-        "Kaattu Yaanam Maavu",
-        "Beetroot Powder",
-        "Karuppu Ulunthu Laddu",
-      ],
-    },
-  ];
+  const pickleGroups = navbarCategories.pickles.groups;
+  const organicGroups = navbarCategories.organic.groups;
 
   const navLinks = [
     {
@@ -126,7 +87,7 @@ export default function Navbar() {
       transition
     "
               >
-                Pickles & Condiments
+                {navbarCategories.pickles.title}
                 <ChevronDown
                   size={18}
                   className={`transition-transform ${
@@ -157,41 +118,25 @@ export default function Navbar() {
         "
                   >
                     <div className="space-y-5">
-                      <div>
-                        <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
-                          Veg
-                        </p>
+                      {pickleGroups.map((group) => (
+                        <div key={group.name}>
+                          <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+                            {group.name}
+                          </p>
 
-                        <div className="space-y-2">
-                          {vegItems.map((item) => (
-                            <Link
-                              key={item}
-                              href="/shop"
-                              className="block hover:text-accent"
-                            >
-                              {item}
-                            </Link>
-                          ))}
+                          <div className="space-y-2">
+                            {group.items.map((item) => (
+                              <Link
+                                key={item}
+                                href="/shop"
+                                className="block hover:text-accent"
+                              >
+                                {item}
+                              </Link>
+                            ))}
+                          </div>
                         </div>
-                      </div>
-
-                      <div>
-                        <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
-                          Non-Veg
-                        </p>
-
-                        <div className="space-y-2">
-                          {nonVegItems.map((item) => (
-                            <Link
-                              key={item}
-                              href="/shop"
-                              className="block hover:text-accent"
-                            >
-                              {item}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -215,7 +160,7 @@ export default function Navbar() {
       transition
     "
               >
-                Organic Mixes & Blends
+                {navbarCategories.organic.title}
                 <ChevronDown
                   size={18}
                   className={`transition-transform ${
@@ -246,14 +191,14 @@ export default function Navbar() {
         "
                   >
                     <div className="space-y-5">
-                      {organicCategories.map((category) => (
-                        <div key={category.name}>
+                      {organicGroups.map((group) => (
+                        <div key={group.name}>
                           <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
-                            {category.name}
+                            {group.name}
                           </p>
 
                           <div className="space-y-2 pl-1">
-                            {category.items.map((item) => (
+                            {group.items.map((item) => (
                               <Link
                                 key={item}
                                 href="/shop"
@@ -314,18 +259,18 @@ export default function Navbar() {
             <div className="space-y-5">
               <div>
                 <h3 className="font-bold text-primary mb-3">
-                  Organic Mixes & Blends
+                  {navbarCategories.organic.title}
                 </h3>
 
                 <div className="space-y-5 pl-3">
-                  {organicCategories.map((category) => (
-                    <div key={category.name}>
+                  {organicGroups.map((group) => (
+                    <div key={group.name}>
                       <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-2">
-                        {category.name}
+                        {group.name}
                       </p>
 
                       <div className="space-y-2 pl-3">
-                        {category.items.map((item) => (
+                        {group.items.map((item) => (
                           <Link key={item} href="/shop" className="block">
                             {item}
                           </Link>

@@ -1,83 +1,77 @@
 import Link from "next/link";
+import {
+  ChefHat,
+  Fish,
+  Leaf,
+  Soup,
+  Wheat,
+  FlaskConical,
+  Apple,
+} from "lucide-react";
+
+const categories = [
+  {
+    title: "Veg",
+    icon: Leaf,
+  },
+  {
+    title: "Non-Veg",
+    icon: Fish,
+  },
+  {
+    title: "Rice Mixes",
+    icon: Wheat,
+  },
+  {
+    title: "Soups & Kanji",
+    icon: Soup,
+  },
+  {
+    title: "Health Malts",
+    icon: FlaskConical,
+  },
+  {
+    title: "Traditional Foods",
+    icon: Apple,
+  },
+];
 
 export default function Categories() {
-  const categories = [
-    {
-      title: "Seafood Products",
-      description:
-        "Authentic coastal flavours — Meen Thokku, Iral Thokku, Kanavai Thokku and more. Made from sun-dried seafood and traditional spices.",
-      image: "/home_categories/sea_food.jpeg",
-    },
-    {
-      title: "Organic Health Foods",
-      description:
-        "Traditional Tamil superfoods — rice mixes, soup powders, and herbal malts crafted from native herbs and ancient grains.",
-      image: "/home_categories/organic_food.jpeg",
-    },
-  ];
-
   return (
-    <section className="py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="bg-white py-8 sm:py-10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-8 text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
+            Shop by Category
+          </p>
 
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="text-primary font-semibold uppercase tracking-wider">
-            Our Categories
-          </span>
-
-          <h2 className="text-4xl text-gray-900 md:text-5xl font-bold mt-4">
-            Discover Our Products
-          </h2>
-
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            Explore our carefully crafted range of authentic seafood
-            delicacies and organic health foods inspired by traditional
-            Tamil recipes.
+          <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-textmain/70 sm:text-base">
+            Use these top-level categories to browse the store quickly by veg,
+            non-veg, rice mixes, soups, health malts, and traditional foods.
           </p>
         </div>
 
-        {/* Category Cards */}
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="flex items-start justify-center gap-5 overflow-x-auto pb-2 sm:gap-8 lg:gap-12">
+          {categories.map((category) => {
+            const Icon = category.icon;
 
-          {categories.map((category) => (
-            <div
-              key={category.title}
-              className="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-300"
-            >
-              {/* Image */}
-              <div className="overflow-hidden h-80">
-                <img
-                  src={category.image}
-                  alt={category.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                />
-              </div>
+            return (
+              <Link
+                key={category.title}
+                href="/shop"
+                className="group flex min-w-20 flex-col items-center text-center"
+              >
+                <span className="flex h-17 w-17 items-center justify-center rounded-full border border-black/10 bg-white shadow-sm transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-md">
+                  <Icon className="h-8 w-8 text-[#111]" strokeWidth={1.9} />
+                </span>
 
-              {/* Content */}
-              <div className="p-8">
-
-                <h3 className="text-2xl font-bold mb-4">
+                <span className="mt-3 max-w-20 text-[12px] leading-snug text-[#7a5b42]">
                   {category.title}
-                </h3>
-
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  {category.description}
-                </p>
-
-                <Link
-                  href="/shop"
-                  className="inline-block bg-cta text-white px-6 py-3 rounded-lg hover:opacity-90 transition"
-                >
-                  Shop Now
-                </Link>
-
-              </div>
-            </div>
-          ))}
-
+                </span>
+              </Link>
+            );
+          })}
         </div>
-
       </div>
     </section>
   );

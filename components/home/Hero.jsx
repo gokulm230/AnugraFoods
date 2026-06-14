@@ -53,13 +53,13 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section className="relative h-[72vh] min-h-[520px] max-h-[760px] overflow-hidden">
 
       {/* Background Images */}
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 bg-cover bg-center transition-all duration-[2000ms] ease-in-out ${
+          className={`absolute inset-0 bg-cover bg-[center_top_20%] transition-all duration-[2000ms] ease-in-out ${
             current === index
               ? "opacity-100 scale-100"
               : "opacity-0 scale-110"
@@ -79,12 +79,12 @@ export default function Hero() {
 
           <div
             key={current}
-            className="max-w-3xl text-white animate-fade-up"
+            className="max-w-3xl text-white animate-fade-up pt-8 md:pt-0"
           >
 
-            <span className="inline-flex items-center bg-organic text-white px-5 py-2 rounded-full text-sm font-medium mb-6">
+            {/* <span className="inline-flex items-center bg-organic text-white px-5 py-2 rounded-full text-sm font-medium mb-6">
               100% Organic • Preservative Free
-            </span>
+            </span> */}
 
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
 
