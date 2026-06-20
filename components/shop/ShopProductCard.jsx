@@ -1,3 +1,5 @@
+"use client";
+
 export default function ShopProductCard({ product }) {
   return (
     <div className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">

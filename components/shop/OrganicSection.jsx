@@ -1,3 +1,5 @@
+"use client";
+
 import organicProducts from "@/data/organicProducts";
 import ShopProductCard from "./ShopProductCard";
 
@@ -8,8 +10,24 @@ const categoryTitles = {
   Soup: "Soup",
 };
 
-export default function OrganicSection() {
-  const productsByCategory = organicProducts.reduce((groupedProducts, product) => {
+const matchesSearch = (product, normalizedQuery) => {
+  if (!normalizedQuery) {
+    return true;
+  }
+
+  return [product.name, product.tamilName, product.description, product.category]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase()
+    .includes(normalizedQuery);
+};
+
+export default function OrganicSection({ searchQuery = "" }) {
+  const filteredProducts = organicProducts.filter((product) =>
+    matchesSearch(product, searchQuery),
+  );
+
+  const productsByCategory = filteredProducts.reduce((groupedProducts, product) => {
     const category = product.category ?? "Rice";
 
     if (!groupedProducts[category]) {
@@ -37,28 +55,38 @@ export default function OrganicSection() {
             Traditional Tamil Superfoods
           </h2>
 
-          <p className="max-w-3xl mx-auto text-gray-600 mt-5">
-            Ancient Tamil superfoods reimagined for modern life.
-            Made from native herbs, healing tubers and traditional grains.
-          </p>
 
         </div>
 
-        <div className="space-y-16">
-          {categoryOrder.map((category) => (
-            <div key={category}>
-              <h3 className="text-2xl font-bold text-gray-900 mb-8">
-                {categoryTitles[category]}
-              </h3>
+        {filteredProducts.length > 0 ? (
+          <div className="space-y-16">
+            {categoryOrder.map((category) => {
+              const categoryProducts = productsByCategory[category] ?? [];
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {(productsByCategory[category] ?? []).map((product) => (
-                  <ShopProductCard key={product.id} product={product} />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+              if (categoryProducts.length === 0) {
+                return null;
+              }
+
+              return (
+                <div key={category}>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-8">
+                    {categoryTitles[category]}
+                  </h3>
+
+                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {categoryProducts.map((product) => (
+                      <ShopProductCard key={product.id} product={product} />
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="rounded-3xl border border-dashed border-gray-300 bg-gray-50 px-6 py-12 text-center text-gray-600">
+            No organic products match your search.
+          </div>
+        )}
 
       </div>
     </section>

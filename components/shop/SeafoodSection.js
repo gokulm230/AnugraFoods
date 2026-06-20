@@ -1,9 +1,27 @@
+"use client";
+
 import seafoodProducts from "@/data/seafoodProducts";
 import ShopProductCard from "./ShopProductCard";
 
-export default function SeafoodSection() {
+const matchesSearch = (product, normalizedQuery) => {
+  if (!normalizedQuery) {
+    return true;
+  }
+
+  return [product.name, product.tamilName, product.description]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase()
+    .includes(normalizedQuery);
+};
+
+export default function SeafoodSection({ searchQuery = "" }) {
+  const filteredProducts = seafoodProducts.filter((product) =>
+    matchesSearch(product, searchQuery),
+  );
+
   return (
-    <section className="py-24 bg-white">
+    <section className="py-10 bg-white">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
@@ -18,25 +36,22 @@ export default function SeafoodSection() {
             Authentic Coastal Flavours
           </h2>
 
-          <p className="max-w-3xl mx-auto text-gray-600 mt-5">
-            Authentic coastal flavours from the kitchens of Tamil Nadu.
-            Made from sun-dried seafood, tamarind, and traditional spices.
-          </p>
-
+  
         </div>
 
         {/* Products */}
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-          {seafoodProducts.map((product) => (
-            <ShopProductCard
-              key={product.id}
-              product={product}
-            />
-          ))}
-
-        </div>
+        {filteredProducts.length > 0 ? (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {filteredProducts.map((product) => (
+              <ShopProductCard key={product.id} product={product} />
+            ))}
+          </div>
+        ) : (
+          <div className="rounded-3xl border border-dashed border-gray-300 bg-gray-50 px-6 py-12 text-center text-gray-600">
+            No seafood products match your search.
+          </div>
+        )}
 
       </div>
     </section>
