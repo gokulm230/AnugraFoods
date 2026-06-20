@@ -55,3 +55,17 @@
 .hover\:bg-primary:hover { background-color: var(--color-primary); }
 .hover\:text-primary:hover { color: var(--color-primary); }
 .hover\:text-accent:hover { color: var(--color-accent); }
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.25s ease-out;
+}

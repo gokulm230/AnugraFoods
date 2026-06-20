@@ -9,7 +9,7 @@ export default function ShopHero({
 }) {
   return (
     <section className="-mt-10 relative z-20">
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-4">
 
         <div className="relative">
 
@@ -24,7 +24,7 @@ export default function ShopHero({
             "
           >
 
-            <div className="flex items-center px-6 py-5">
+            <div className="flex items-center px-4 py-3">
 
               <div
                 className="
@@ -78,21 +78,6 @@ export default function ShopHero({
 
             </div>
 
-            {/* Bottom info bar */}
-            <div
-              className="
-                px-6
-                py-3
-                bg-card
-                border-t
-                border-amber-100
-              "
-            >
-              <p className="text-sm text-gray-600">
-                Find your favourite organic foods,
-                soups, malts and seafood products.
-              </p>
-            </div>
 
           </div>
 

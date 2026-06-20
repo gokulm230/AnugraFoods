@@ -1,4 +1,5 @@
 "use client";
+import { generateWhatsAppLink } from "@/utils/whatsapp";
 
 export default function ShopProductCard({ product }) {
   return (
@@ -40,9 +41,14 @@ export default function ShopProductCard({ product }) {
             </p>
           </div>
 
-          <button className="bg-cta text-white px-5 py-3 rounded-xl hover:opacity-90 transition">
-            Add To Cart
-          </button>
+          <a
+            href={generateWhatsAppLink(product)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-cta text-white px-5 py-3 rounded-xl hover:opacity-90 transition"
+          >
+            Buy Now
+          </a>
 
         </div>
 

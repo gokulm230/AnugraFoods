@@ -10,88 +10,59 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [pickleOpen, setPickleOpen] = useState(false);
   const [organicOpen, setOrganicOpen] = useState(false);
+  const [mobilePicklesOpen, setMobilePicklesOpen] = useState(false);
+  const [mobileOrganicOpen, setMobileOrganicOpen] = useState(false);
 
   const pickleGroups = navbarCategories.pickles.groups;
   const organicGroups = navbarCategories.organic.groups;
 
-  const navLinks = [
-    {
-      name: "About",
-      href: "/about",
-    },
-    {
-      name: "FAQ",
-      href: "/faq",
-    },
-    {
-      name: "Contact",
-      href: "/contact",
-    },
-  ];
-
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-black/5 bg-background/95 backdrop-blur">
-      <div className="mx-auto flex min-h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        {/* Logo */}
+    <header className="sticky top-0 z-50 border-b border-black/5 bg-background shadow-sm">
+      <div className="mx-auto max-w-7xl px-3 sm:px-4 lg:px-6 xl:px-8">
+        <div className="flex h-12 items-center justify-between gap-2 sm:h-14 xl:h-15">
+          <Link href="/" className="flex items-center gap-2 sm:gap-3">
+            <Image
+              src="/anugra_logo.jpeg"
+              alt="Anugra Food Products"
+              width={40}
+              height={40}
+              className="h-9 w-9 rounded-full object-cover sm:h-10 sm:w-10"
+              priority
+            />
 
-        <Link href="/" className="flex items-center gap-3">
-          <Image
-            src="/anugra_logo.jpeg"
-            alt="Anugra Food Products logo"
-            width={56}
-            height={56}
-            className="h-14 w-14 rounded-full object-cover"
-            priority
-          />
+            <div className="hidden leading-tight sm:block">
+              <h1 className="text-base font-bold text-primary md:text-lg">
+                ANUGRA
+              </h1>
 
-          <span className="flex flex-col leading-tight">
-            <span className="text-2xl font-bold text-primary">ANUGRA</span>
+              <p className="text-[8px] tracking-[0.2em] text-textmain md:text-[9px]">
+                FOOD PRODUCTS
+              </p>
+            </div>
+          </Link>
 
-            <span className="text-xs tracking-[0.2em] text-textmain">
-              FOOD PRODUCTS
-            </span>
-          </span>
-        </Link>
-
-        {/* Desktop Navigation */}
-
-        <nav className="hidden lg:flex items-center gap-10">
-          {/* <div className="flex items-center gap-7">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="font-medium text-textmain transition hover:text-accent"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div> */}
-
-          {/* Products Dropdown */}
-
-          <div
-            className="relative"
-            onMouseEnter={() => setPickleOpen(true)}
-            onMouseLeave={() => setPickleOpen(false)}
-          >
-            <button
-              onClick={() => setPickleOpen(!pickleOpen)}
-              className="flex items-center gap-1 font-medium text-textmain transition hover:text-accent"
+          <nav className="hidden xl:flex items-center gap-7 2xl:gap-9">
+            <div
+              className="relative"
+              onMouseEnter={() => setPickleOpen(true)}
+              onMouseLeave={() => setPickleOpen(false)}
             >
-              {navbarCategories.pickles.title}
-              <ChevronDown
-                size={18}
-                className={`transition-transform ${pickleOpen ? "rotate-180" : ""}`}
-              />
-            </button>
+              <button className="flex items-center gap-1.5 text-sm font-medium transition hover:text-accent 2xl:text-[15px]">
+                {navbarCategories.pickles.title}
 
-            {pickleOpen && (
-              <div className="absolute left-0 top-full z-50 pt-2">
-                <div className="min-w-85 rounded-2xl border border-black/5 bg-background p-5 shadow-xl">
-                  <div className="space-y-5">
+                <ChevronDown
+                  size={16}
+                  className={`transition-transform ${
+                    pickleOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {pickleOpen && (
+                <div className="absolute left-0 top-full z-50 pt-3">
+                  <div className="w-80 rounded-2xl border border-black/5 bg-background p-5 shadow-xl">
                     {pickleGroups.map((group) => (
-                      <div key={group.name}>
+                      <div key={group.name} className="mb-5 last:mb-0">
                         <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary">
                           {group.name}
                         </p>
@@ -101,7 +72,7 @@ export default function Navbar() {
                             <Link
                               key={item}
                               href="/shop"
-                              className="block hover:text-accent"
+                              className="block transition hover:text-accent"
                             >
                               {item}
                             </Link>
@@ -111,42 +82,40 @@ export default function Navbar() {
                     ))}
                   </div>
                 </div>
-              </div>
-            )}
-          </div>
+              )}
+            </div>
 
-          <div
-            className="relative"
-            onMouseEnter={() => setOrganicOpen(true)}
-            onMouseLeave={() => setOrganicOpen(false)}
-          >
-            <button
-              onClick={() => setOrganicOpen(!organicOpen)}
-              className="flex items-center gap-1 font-medium text-textmain transition hover:text-accent"
+            <div
+              className="relative"
+              onMouseEnter={() => setOrganicOpen(true)}
+              onMouseLeave={() => setOrganicOpen(false)}
             >
-              {navbarCategories.organic.title}
-              <ChevronDown
-                size={18}
-                className={`transition-transform ${organicOpen ? "rotate-180" : ""}`}
-              />
-            </button>
+              <button className="flex items-center gap-1.5 text-sm font-medium transition hover:text-accent 2xl:text-[15px]">
+                {navbarCategories.organic.title}
 
-            {organicOpen && (
-              <div className="absolute left-0 top-full z-50 pt-2">
-                <div className="min-w-90 rounded-2xl border border-black/5 bg-background p-5 shadow-xl">
-                  <div className="space-y-5">
+                <ChevronDown
+                  size={16}
+                  className={`transition-transform ${
+                    organicOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {organicOpen && (
+                <div className="absolute left-0 top-full z-50 pt-3">
+                  <div className="w-96 rounded-2xl border border-black/5 bg-background p-5 shadow-xl">
                     {organicGroups.map((group) => (
-                      <div key={group.name}>
+                      <div key={group.name} className="mb-5 last:mb-0">
                         <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary">
                           {group.name}
                         </p>
 
-                        <div className="space-y-2 pl-1">
+                        <div className="space-y-2">
                           {group.items.map((item) => (
                             <Link
                               key={item}
                               href="/shop"
-                              className="block hover:text-accent"
+                              className="block transition hover:text-accent"
                             >
                               {item}
                             </Link>
@@ -156,55 +125,114 @@ export default function Navbar() {
                     ))}
                   </div>
                 </div>
-              </div>
-            )}
-          </div>
+              )}
+            </div>
+          </nav>
 
-          <div className="hidden lg:flex items-center">
-            <button className="rounded-full p-2 transition hover:bg-card">
-              <ShoppingCart size={22} className="text-textmain" />
+          <div className="flex items-center gap-1 sm:gap-2.5">
+            <button className="hidden rounded-full p-2 transition hover:bg-card xl:flex">
+              <ShoppingCart size={20} />
+            </button>
+
+            <button
+              className="inline-flex items-center justify-center rounded-full p-1.5 transition hover:bg-card xl:hidden"
+              onClick={() => setOpen(true)}
+              aria-label="Open menu"
+            >
+              <Menu size={22} />
             </button>
           </div>
-        </nav>
+        </div>
+      </div>
 
-        {/* Mobile Menu Button */}
+      {open && (
+        <div className="fixed inset-0 z-100 bg-black/50 xl:hidden">
+          <div className="absolute right-0 top-0 h-full w-[88%] max-w-xs bg-background shadow-2xl sm:max-w-sm">
+            <div className="flex items-center justify-between border-b bg-background px-4 py-3 sm:px-5 sm:py-4">
+              <h2 className="font-bold text-primary">Menu</h2>
 
-        <button className="lg:hidden" onClick={() => setOpen(!open)}>
-          {open ? <X className="text-textmain" /> : <Menu className="text-textmain" />}
-        </button>
+              <button onClick={() => setOpen(false)} aria-label="Close menu">
+                <X size={20} />
+              </button>
+            </div>
 
-        {/* Mobile Menu */}
-
-        {open && (
-          <div className="lg:hidden border-t border-black/5 bg-background px-4 py-5 shadow-lg">
-            <div className="space-y-5">
+            <div className="space-y-5 overflow-y-auto bg-background p-4 sm:p-5">
               <div>
-                <h3 className="mb-3 font-bold text-primary">{navbarCategories.organic.title}</h3>
+                <button
+                  onClick={() => setMobilePicklesOpen(!mobilePicklesOpen)}
+                  className="flex w-full items-center justify-between font-medium"
+                >
+                  {navbarCategories.pickles.title}
 
-                <div className="space-y-5 pl-3">
-                  {organicGroups.map((group) => (
-                    <div key={group.name}>
-                      <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-2">
-                        {group.name}
-                      </p>
+                  <ChevronDown
+                    className={`transition-transform ${
+                      mobilePicklesOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
 
-                      <div className="space-y-2 pl-3">
+                {mobilePicklesOpen && (
+                  <div className="mt-4 space-y-4 pl-4">
+                    {pickleGroups.map((group) => (
+                      <div key={group.name}>
+                        <p className="mb-2 text-xs font-semibold uppercase text-primary">
+                          {group.name}
+                        </p>
+
                         {group.items.map((item) => (
-                          <Link key={item} href="/shop" className="block">
+                          <Link key={item} href="/shop" className="block py-1">
                             {item}
                           </Link>
                         ))}
                       </div>
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <div>
+                <button
+                  onClick={() => setMobileOrganicOpen(!mobileOrganicOpen)}
+                  className="flex w-full items-center justify-between font-medium"
+                >
+                  {navbarCategories.organic.title}
+
+                  <ChevronDown
+                    className={`transition-transform ${
+                      mobileOrganicOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                {mobileOrganicOpen && (
+                  <div className="mt-4 space-y-4 pl-4">
+                    {organicGroups.map((group) => (
+                      <div key={group.name}>
+                        <p className="mb-2 text-xs font-semibold uppercase text-primary">
+                          {group.name}
+                        </p>
+
+                        {group.items.map((item) => (
+                          <Link key={item} href="/shop" className="block py-1">
+                            {item}
+                          </Link>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
 
               <hr />
+
+              <button className="flex items-center gap-3 font-medium">
+                <ShoppingCart size={20} />
+                Cart
+              </button>
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </header>
   );
 }

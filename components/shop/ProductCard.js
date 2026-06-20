@@ -1,7 +1,7 @@
+import { generateWhatsAppLink } from "@/utils/whatsapp";
 export default function ProductCard({ product }) {
   return (
     <div className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition">
-
       <div className="h-64 overflow-hidden">
         <img
           src={product.image}
@@ -11,39 +11,31 @@ export default function ProductCard({ product }) {
       </div>
 
       <div className="p-6">
-
         <span className="text-sm text-primary font-medium">
           {product.category}
         </span>
 
-        <h3 className="text-xl font-bold mt-2">
-          {product.name}
-        </h3>
+        <h3 className="text-xl font-bold mt-2">{product.name}</h3>
 
-        <p className="text-gray-500 text-sm mt-1">
-          {product.tamilName}
-        </p>
+        <p className="text-gray-500 text-sm mt-1">{product.tamilName}</p>
 
         <div className="flex justify-between items-center mt-4">
-
           <div>
-            <p className="text-2xl font-bold">
-              ₹{product.price}
-            </p>
+            <p className="text-2xl font-bold">₹{product.price}</p>
 
-            <p className="text-sm text-gray-500">
-              {product.weight}
-            </p>
+            <p className="text-sm text-gray-500">{product.weight}</p>
           </div>
 
-          <button className="bg-cta text-white px-4 py-2 rounded-lg hover:opacity-90">
-            Add to Cart
-          </button>
-
+          <a
+            href={generateWhatsAppLink(product)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-cta text-white px-5 py-3 rounded-xl hover:opacity-90 transition"
+          >
+            Buy Now
+          </a>
         </div>
-
       </div>
-
     </div>
   );
 }
